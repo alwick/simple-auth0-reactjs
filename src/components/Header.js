@@ -17,7 +17,7 @@ export default class Header extends Component {
             <Navbar>
               <Navbar.Header>
                 <Navbar.Brand>
-                  <a href="/">Wickidcool Authentication</a>
+                  <a href="/">Authentication</a>
                 </Navbar.Brand>
               </Navbar.Header>
               <Nav>

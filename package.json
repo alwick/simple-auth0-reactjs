@@ -2,6 +2,12 @@
   "name": "simple-auth0",
   "version": "0.1.0",
   "description": "Simple Auth0 Authentication App",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
   "dependencies": {
     "auth0-js": "9.4.2",
     "body-parser": "1.18.2",
@@ -13,11 +19,5 @@
     "react-bootstrap": "0.32.1",
     "react-router": "4.2.0",
     "react-router-dom": "4.2.2"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
   }
 }

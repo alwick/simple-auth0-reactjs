@@ -5,6 +5,7 @@ import Callback from './components/Callback';
 import Auth from './components/Auth';
 import history from './components/history';
 import Public from './components/Public'
+import Private from './components/Private'
 
 const auth = new Auth();
 
@@ -19,7 +20,14 @@ export const makeMainRoutes = () => {
     <Router history={history}>
       <div>
         <Route exact path="/" render={(props) => <App auth={auth} {...props}><Public {...props}/></App>} />
-        <Route path="/home" render={(props) => <App auth={auth} {...props}><Public {...props}/></App>} />
+        <Route path="/home" render={(props) => <App auth={auth} {...props}>
+          {auth.isAuthenticated() &&
+          <Private {...props}/>
+          }
+          {!auth.isAuthenticated() &&
+          <Public {...props}/>
+          }
+        </App>} />
         <Route path="/callback" render={(props) => {
           handleAuthentication(props);
           return <Callback {...props} />
